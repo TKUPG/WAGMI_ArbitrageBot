@@ -2,7 +2,7 @@ const ethers = require("ethers");
 const ccxt = require("ccxt");
 require("dotenv").config();
 
-const provider = new ethers.providers.JsonRpcProvider(`https://eth-sepolia.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`);
+const provider = new ethers.providers.JsonRpcProvider(`https://eth-sepolia.g.alchemy.com/v2/eewbTf8NV5M3MVEfwRs4u`);
 const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
 const uniswap = new ccxt.uniswap({ enableRateLimit: true });
 const sushiswap = new ccxt.sushiswap({ enableRateLimit: true });
@@ -11,7 +11,7 @@ const ArbitrageBotABI = [
   // Add relevant ABI from ArbitrageBot.sol
   "function executeArbitrage(address,uint256,address,uint256,address[],address[])",
 ];
-const botAddress = "YOUR_DEPLOYED_CONTRACT_ADDRESS";
+const botAddress = "0x6FdBCbaaa28DB611B7101873Be15B3Eadce44179";
 const contract = new ethers.Contract(botAddress, ArbitrageBotABI, wallet);
 
 async function monitorPrices() {

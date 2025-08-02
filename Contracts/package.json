@@ -6,7 +6,8 @@
   },
   "dependencies": {
     "@aave/core-v3": "^1.19.3",
-    "@openzeppelin/contracts": "^5.4.0",
+    "@openzeppelin/contracts": "^5.0.2",
+    "alchemy-sdk": "^3.6.2",
     "axios": "^1.11.0",
     "ccxt": "^4.4.96",
     "dotenv": "^17.2.1",
